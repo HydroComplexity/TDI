@@ -1,0 +1,43 @@
+
+
+
+Time: 7/27/2013 at 13:46
+Study Area: BPNM_DEM2
+ No DEM correction   
+-------------------------------------------------
+         DEPRESSION IDENTIFICATION MODEL         
+-------------------------------------------------
+ Toporaphic data size: 1000 x 1000
+ Grid size: dx = 1.524 (m)
+            dy = 1.524 (m)
+                                                 
+ Total # of searching process: 1000000
+                                                 
+                                                      
+                                                      
+ SEARCHING LEVEL 1/1
+ -------------------                                  
+ CENTER SEARCH   
+   Elapsed time is 0 mins and 1.006526 secs
+                      
+ DEPRESSION SEARCH    
+
+
+
+Time: 5/23/2016 at 11:19
+Study Area: BPNM_DEM2
+ No DEM correction   
+-------------------------------------------------
+         DEPRESSION IDENTIFICATION MODEL         
+-------------------------------------------------
+ Toporaphic data size: 1000 x 1000
+ Grid size: dx = 1.524 (m)
+            dy = 1.524 (m)
+                                                 
+ Total # of searching process: 1000000
+                                                 
+                                                      
+                                                      
+ SEARCHING LEVEL 1/4
+ -------------------                                  
+ CENTER SEARCH   

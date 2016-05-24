@@ -1,0 +1,13 @@
+PUDDLE MODEL - Version 14 
+Date: June 20th, 2013
+Change logs:
+- Added Minkowski option for multi center searching
+- Added volume, area, depths statistics
+- Corrected maximum depth for high level puddles
+- Avoid NULL return of "realloc" in C using mex
+- Add check RESULTS folder exits. If error, folder RESULTS will be created.
+
+PUDDLE MODEL - Version 15 
+Date: June 20th, 2013
+Change logs:
+- Add inpainting interpolation method option
