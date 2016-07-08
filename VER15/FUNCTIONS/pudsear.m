@@ -96,7 +96,7 @@ if ~isempty(Cen_single)
   Thres_s       = reshape(Thres_s,2,length(Thres_s)/2)';  
   i_s           = 1:1:length(Cen_s);
   Cen_real_s    = zeros(length(Cen_s),1);  
-  Cen_real_s    = MAT_ori.grid((Cen_s(i_s,1)-1)*N+Cen_s(i_s,2));
+  Cen_real_s    = MAT_ori.grid((Cen_s(i_s,2)-1)*N+Cen_s(i_s,1));
   Center_real   = cat(1,Center_real,Cen_real_s);
   
   Pud_s         = Cen_s;                                                    % Single-center, Pud cells are center cells
@@ -115,7 +115,7 @@ if ~isempty(Cen_single)
   ind_other(1)  = 0;
   i_other       = 1:1:length(Cen_other);
   Cen_real_other= zeros(length(Cen_other),1);  
-  Cen_real_other= MAT_ori.grid((Cen_other(i_other,1)-1)*N+Cen_other(i_other,2));
+  Cen_real_other= MAT_ori.grid((Cen_other(i_other,2)-1)*N+Cen_other(i_other,1));
   Center_real   = cat(1,Center_real,Cen_real_other);
 
   %... Identify & separate single centers, puddle cells & single thresholds
