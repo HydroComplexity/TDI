@@ -29,16 +29,16 @@
   SWITCHES.save_on      = 1;      % 1 = Saving variables to .mat file, 
 %                                 % 0 = No saving
 %
-	SWITCHES.plots_on     = 0;      % 1 = Plotting results, 
+  SWITCHES.plots_on     = 0;      % 1 = Plotting results, 
 %                                 % 0 = No plotting
 %
-	SWITCHES.surfer       = 0;      % 1 = Export to Surfer GRD file, 
+  SWITCHES.surfer       = 0;      % 1 = Export to Surfer GRD file, 
 %                                 % 0 = No exporting
 %
-	SWITCHES.block        = 0;      % 1 = Split DEM into blocks quick search, 
+  SWITCHES.block        = 0;      % 1 = Split DEM into blocks quick search, 
 %                                 % 0 = No block applied
 %
-	SWITCHES.correct      = 0;      % 1 = Apply correction for DEM, 
+  SWITCHES.correct      = 0;      % 1 = Apply correction for DEM, 
 %                                 % 0 = No correction applied
 %
   interpolate_method    = 0;      % 1 = Get nearest neighbor value 
@@ -58,7 +58,7 @@
   ndv           = -9999;
   flood         = 0;  
   mink          = 10000;
-  max_size    	= 20000;  
+  max_size      = 20000;  
   
 % 
 %% . . .LOAD TOPOGRAPHIC DATA . . . . . . . . . . . . . . . . . . . . . . .  
@@ -67,8 +67,9 @@
   %full_file_in  = ['../LiDAR_Data/BPNM/',file_in,'.',ex_file];
   full_file_in  = ['../LiDAR_Data/BPNM/BPNM_DEM2.tif'];
   [Z, R, bbox]  = geotiffread(full_file_in);
+  info = geotiffinfo(full_file_in);
   [My,Mx]       = size(Z);        
-  Z_in          = double(Z(1:1000,1:1000));
+  Z_in          = double(Z);
   [My_in,Mx_in] = size(Z_in);            
   
   if (SWITCHES.block)
@@ -331,6 +332,8 @@
                     'area',       'volume',     'max_depth',  'mean_depth', ... 
                     'xmax',       'xmin',       'ymax',       'ymin',       ...
                     'nrows',      'ncols');
+      filetiff = ['./RESULTS/',file_out,'_LEV_',num2str(lev),'.tif'];       
+      geotiffwrite(filetiff,single(Puddle),R,'GeoKeyDirectoryTag',info.GeoTIFFTags.GeoKeyDirectoryTag);
     end
   end
     
